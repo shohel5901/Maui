@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBasicApp.Views.MainPage">
+
+	<ScrollView>
+		<VerticalStackLayout
+            Padding="10,0,0,20"
+            Spacing="10">
+
+			<Label
+                Text="Hello, Head line!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+			<Label
+                Text="Welcome to &#10;.NET Sub Head Line"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+			<Label HorizontalOptions="Center">
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="Hello," FontSize="20" />
+						<Span Text=" Jamal. &#10;" FontSize="20" FontAttributes="Bold" TextColor="Blue" />
+						<Span Text="Welcome to Formatted Label MAUI." FontSize="20" />
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+
+			<Label
+                Text="I am only the label for Maui."
+	            HorizontalOptions="Center"/>
+
+			<Border />
+
+			<HorizontalStackLayout
+				Spacing="10">
+				<Border
+				Stroke="DarkBlue"
+				StrokeThickness="2"
+				Background="Transparent"
+				HeightRequest="100"
+				WidthRequest="100"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"
+				StrokeShape="RoundRectangle 50">
+					<Border
+					Stroke="DarkBlue"
+					StrokeThickness="2"
+					Background="Transparent"
+					HeightRequest="80"
+					WidthRequest="80"
+					HorizontalOptions="Center"
+					VerticalOptions="Center"
+					StrokeShape="RoundRectangle 50">
+						<Label Text="1"
+						FontSize="36"
+						TextColor="DarkBlue"
+						HorizontalOptions="Center"
+						VerticalOptions="Center" />
+					</Border>
+				</Border>
+
+				<Frame
+				WidthRequest="100"
+				HeightRequest="100"
+				CornerRadius="50"
+				BorderColor="DarkBlue"
+				BackgroundColor="YellowGreen"
+				HasShadow="False"
+				Padding="0"
+				HorizontalOptions="Center"
+				VerticalOptions="Center">
+					<Frame
+					WidthRequest="80"
+					HeightRequest="80"
+					CornerRadius="50"
+					BorderColor="DarkBlue"
+					BackgroundColor="White"
+					HasShadow="False"
+					Padding="0"
+					HorizontalOptions="Center"
+					VerticalOptions="Center">
+						<ActivityIndicator 
+						IsRunning="True" 
+						IsVisible="True"
+						/>
+					</Frame>
+				</Frame>
+
+				<Border
+                Stroke="DarkBlue"
+                StrokeThickness="2"
+                Background="Transparent"
+                HeightRequest="100"
+                WidthRequest="100"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                StrokeShape="RoundRectangle 50">
+					<Border
+					Stroke="DarkBlue"
+					StrokeThickness="2"
+					Background="Transparent"
+					HeightRequest="80"
+					WidthRequest="80"
+					HorizontalOptions="Center"
+					VerticalOptions="Center"
+					StrokeShape="RoundRectangle 50">
+						<Label Text="1"
+					    FontSize="36"
+					    TextColor="DarkBlue"
+					    HorizontalOptions="Center"
+					    VerticalOptions="Center" />
+					    </Border>
+				</Border>
+			</HorizontalStackLayout>
+			
+			
+
+			<Border />
+
+			<!-- Simple BoxView (a solid color rectangle) -->
+			<ScrollView>
+				<HorizontalStackLayout
+	            Padding="10"
+	            Spacing="10"
+	            HeightRequest="180"
+	            MinimumWidthRequest="200">
+					<BoxView
+                    WidthRequest="150"
+                    CornerRadius="30"
+                    HeightRequest="150"
+                    Color="CornflowerBlue"
+                    HorizontalOptions="Center" />
+					<BoxView
+                    WidthRequest="150"
+                    CornerRadius="30"
+                    HeightRequest="150"
+                    Color="AliceBlue"
+                    HorizontalOptions="Center" />
+					<BoxView
+                    WidthRequest="150"
+                    CornerRadius="30"
+                    HeightRequest="150"
+                    Color="BlueViolet"
+                    HorizontalOptions="Center" />
+					<BoxView
+                    WidthRequest="150"
+                    CornerRadius="30"
+                    HeightRequest="150"
+                    Color="CadetBlue"
+                    HorizontalOptions="Center" />
+					<BoxView
+                    WidthRequest="150"
+                    CornerRadius="30"
+                    HeightRequest="150"
+                    Color="DeepSkyBlue"
+                    HorizontalOptions="Center" />
+
+
+
+				</HorizontalStackLayout>
+			</ScrollView>
+			<Border />
+			<ScrollView>
+				<HorizontalStackLayout 
+					Padding="5"
+					Spacing="5">
+					<Button
+						Text="Hello"/>
+					<Button
+				        Text="World"
+						BackgroundColor="CornflowerBlue"
+						BorderColor="AliceBlue"/>
+					<CheckBox />
+
+					<DatePicker/>
+
+
+
+				</HorizontalStackLayout>
+			</ScrollView>
+			<Border />
+
+			<Editor Placeholder="Hello editor" WidthRequest="200" />
+			<Entry Placeholder="Hello Entry" WidthRequest="200"/>
+			<SearchBar Placeholder="Hello Search Bar" WidthRequest="200"/>
+		
+
+			<Image Source="dotnet_bot.png"
+            WidthRequest="120"
+            HeightRequest="120"
+            HorizontalOptions="Center">
+				<Image.Shadow>
+					<Shadow Brush="Black"
+                    Offset="10,10"
+                    Radius="50"
+                    Opacity=".5" />
+				    </Image.Shadow>
+			</Image>
+
+			<Label Text="Hello, Shadow!"
+			FontSize="32"
+			TextColor="Black"
+			HorizontalOptions="Center"
+			VerticalOptions="Center">
+				<Label.Shadow>
+					<Shadow Brush="Gray"
+                    Offset="5,5"
+                    Radius="10"
+                    Opacity="0.9" />
+				    </Label.Shadow>
+			</Label>
+
+			<Switch x:Name="toggleSwitch"
+            OnColor="Green"
+            IsToggled="False"
+            HorizontalOptions="Center" />
+
+			<TimePicker/>
+			<Slider
+			Minimum="0"
+			Maximum="10"
+			Value="5"
+			ThumbColor="Orange"
+			MinimumTrackColor="Green"
+			MaximumTrackColor="LightGray" />
+
+
+
+		</VerticalStackLayout>
+	</ScrollView>
+
+</ContentPage>

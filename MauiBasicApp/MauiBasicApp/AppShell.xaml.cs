@@ -1,10 +1,12 @@
-﻿namespace MauiBasicApp
+﻿namespace MauiBasicApp;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        //Routing.RegisterRoute(nameof(MauiBasicApp.Views.MainPage), typeof(MauiBasicApp.Views.MainPage));
+        //Routing.RegisterRoute(nameof(MauiBasicApp.Views.LoginView), typeof(MauiBasicApp.Views.LoginView));
     }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBasicApp.Views.LoginView"
+			 xmlns:local="clr-namespace:MauiBasicApp.Helpers"
+             Title="LoginView">
+
+	<Grid RowDefinitions="*, 40, *">
+		<!-- Top section -->
+		<Image Source="loginimg.png" Grid.Row="0" Aspect="AspectFill" BackgroundColor="Transparent" />
+
+		<!-- Wave divider using GraphicsView -->
+		<GraphicsView Grid.Row="1"
+                      HeightRequest="40"
+                      Drawable="{x:Static local:WaveDrawable.Instance}" />
+
+		<!-- Bottom section -->
+		<StackLayout Grid.Row="2" Padding="20" BackgroundColor="White">
+			<Label Text="Welcome Back!" FontSize="24" HorizontalOptions="Center"/>
+			<Button Text="Login"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    BackgroundColor="#3B5BA5"
+                    TextColor="White"
+                    CornerRadius="20"/>
+		</StackLayout>
+	</Grid>
+
+</ContentPage>
